@@ -21,6 +21,11 @@
         </ul>
         <!-- Sidebar -->
         <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                        fill="#1BA098">
+                        <path
+                            d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                    </svg></a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#">Company</a></li>
             <li><a href="#">Teams</a></li>
@@ -48,6 +53,10 @@
         function showSidebar() {
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'block'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
         }
     </script>
 
