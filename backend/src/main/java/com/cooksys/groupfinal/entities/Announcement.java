@@ -3,10 +3,7 @@ package com.cooksys.groupfinal.entities;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import org.springframework.data.annotation.CreatedDate;
 

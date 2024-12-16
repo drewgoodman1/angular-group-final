@@ -1,7 +1,6 @@
 package com.cooksys.groupfinal.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import jakarta.persistence.*;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
