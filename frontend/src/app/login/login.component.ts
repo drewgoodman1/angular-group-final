@@ -17,6 +17,7 @@ export class LoginComponent {
     this.authService.login(this.username, this.password).subscribe({
       next: () => {
         console.log('Login successful!');
+        console.log(this.authService.getLoggedInUser())
         // this.router.navigate(['/ to home page']);
       },
       error: (err) => {
