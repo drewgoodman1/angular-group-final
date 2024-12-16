@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    background-color: #051622;
+    color: #1ba098;
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+    font-size: 48px;
+}
+
+nav {
+    height: 119px;
+    border: 2px solid #deb992;
+}
+
+nav img {
+    width: 71px;
+    height: 71px;
+    margin-top: 24px;
+    margin-left: 58px;
+}
+
+.role {
+    color:#f24e1e;
+    font-size: 24px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 72px;
+    margin-top: 24px;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
