@@ -9,6 +9,7 @@ import { WorkerNavbarComponent } from './worker-navbar/worker-navbar.component';
 import { LoginComponent } from './login/login.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TeamViewComponent } from './component/team-view/team-view.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TeamViewComponent } from './component/team-view/team-view.component';
     LoginComponent,
     TeamsComponent,
     TeamViewComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
