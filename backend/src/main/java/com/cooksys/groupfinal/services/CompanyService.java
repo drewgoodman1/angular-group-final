@@ -17,4 +17,12 @@ public interface CompanyService {
 
 	Set<ProjectDto> getAllProjects(Long companyId, Long teamId);
 
+	// New method to create an announcement
+	AnnouncementDto createAnnouncement(Long companyId, AnnouncementDto announcementDto);
+
+	
+
+
+
+
 }

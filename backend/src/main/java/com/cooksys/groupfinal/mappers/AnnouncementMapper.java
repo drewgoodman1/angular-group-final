@@ -13,5 +13,10 @@ public interface AnnouncementMapper {
 	AnnouncementDto entityToDto(Announcement announcement);
 
   Set<AnnouncementDto> entitiesToDtos(Set<Announcement> announcement);
+
+  // map AnnouncementDto to Entity
+  Announcement dtoToEntity(AnnouncementDto announcementDto);
+
+
     
 }
