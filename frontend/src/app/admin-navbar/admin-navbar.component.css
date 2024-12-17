@@ -60,7 +60,7 @@ body {
 .sidebar li {
     border-bottom: 3px solid #1BA098;
     background: #0C3957;
-    padding: 60px;
+    padding: 50px;
 }
 
 .sidebar li a {
@@ -71,6 +71,14 @@ body {
     color: #f24e1e;
 }
 
-@media (max-width: 600px){
-    
+@media screen and (min-width: 200px) and (max-width: 600px) {
+    #navbar-fullscreen {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    #hamburger-menu {
+        display: none;
+    }
 }
