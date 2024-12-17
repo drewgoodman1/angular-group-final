@@ -58,9 +58,11 @@ body {
 }
 
 .sidebar li {
-    border-bottom: 3px solid #1BA098;
     background: #0C3957;
     padding: 50px;
+    background: 
+    linear-gradient(#1ba098 0 0) bottom/ 80% 2px no-repeat, 
+    #0C3957;
 }
 
 .sidebar li a {
@@ -71,13 +73,13 @@ body {
     color: #f24e1e;
 }
 
-@media screen and (min-width: 200px) and (max-width: 600px) {
+@media screen and (min-width: 200px) and (max-width: 965px) {
     #navbar-fullscreen {
         display: none;
     }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 966px) {
     #hamburger-menu {
         display: none;
     }
