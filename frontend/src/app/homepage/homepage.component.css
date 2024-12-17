@@ -33,6 +33,7 @@ body {
     border-radius: 10px;
     background-color: #1BA098;
     color: white;
+    border: none;
 }
 
 #new-button:hover {

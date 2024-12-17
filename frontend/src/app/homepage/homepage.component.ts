@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AdminNavbarComponent } from '../admin-navbar/admin-navbar.component';
-import { WorkerNavbarComponent } from '../worker-navbar/worker-navbar.component';
+// import { AdminNavbarComponent } from '../admin-navbar/admin-navbar.component';
+// import { WorkerNavbarComponent } from '../worker-navbar/worker-navbar.component';
 
 @Component({
   selector: 'app-homepage',
