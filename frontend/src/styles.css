@@ -10,3 +10,17 @@
 
   --tan: #deb992;
 }
+
+body {
+  background-color: var(--primary-color);
+}
+
+h1,
+h2,
+label {
+  color: var(--secondary-color);
+  font-family: "Song Myung", serif;
+}
+button {
+  color: white;
+}
