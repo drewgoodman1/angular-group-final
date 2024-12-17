@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="worker-navbar.component.css">
+    <!-- Mulish Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav-container">
+        <li><img src="projectLogo.png" class="logo"></li>
+        <!-- Left section of navbar -->
+        <ul class="left-side">
+            <!-- Need to replace with the worker's name -->
+            <li class="role">USER ROLE: WORKER</li>
+        </ul>
+        <!-- Sidebar -->
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960"
+                    width="48px" fill="#1BA098">
+                    <path
+                        d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                </svg></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+        <!-- Right section of navbar -->
+        <ul class="right-side">
+            <li id="navbar-fullscreen"><a href="#">Home</a></li>
+            <li id="navbar-fullscreen"><a href="#">Teams</a></li>
+            <li id="navbar-fullscreen"><a href="#">Logout</a></li>
+            <li onclick=showSidebar() id="hamburger-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                    fill="#1BA098">
+                    <path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                </svg>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'block'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+
+</body>
+
+</html>
