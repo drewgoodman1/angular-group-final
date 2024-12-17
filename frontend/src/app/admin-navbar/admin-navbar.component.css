@@ -58,9 +58,11 @@ body {
 }
 
 .sidebar li {
-    border-bottom: 3px solid #1BA098;
     background: #0C3957;
     padding: 50px;
+    background: 
+    linear-gradient(#1ba098 0 0) bottom/ 80% 2px no-repeat, 
+    #0C3957;
 }
 
 .sidebar li a {
