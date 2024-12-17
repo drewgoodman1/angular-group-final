@@ -12,9 +12,12 @@ body {
     font-size: 48px;
 }
 
+/* Title and New Announcement Button */
+
 .title-container {
     margin: auto;
     padding-bottom: 50px;
+    margin-bottom: 50px;
     width: 50%;
     padding-top: 20px;
     border-bottom: 1px solid #deb992;
@@ -39,6 +42,39 @@ body {
 #new-button:hover {
     background-color: #f24e1e;
 }
+
+/* New Announcement Button Pop Up Menu */
+
+.form {
+    margin: 0 auto;
+    padding-top: 50px;
+    width: 480px;
+    height: 440px;
+    background-color: #0029f6;
+    border-radius: 13px;
+}
+
+.labels {
+    display: block;
+    text-align: left;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    color: #deb992;
+    font-size: 18px;
+}
+
+.form-input {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    display: block;
+    width: 80%;
+    font-size: 18px;
+    border-bottom: 1px solid #deb992;
+}
+
+/* Will be editing these later - need to add an onclick to show/hide the menu */
 
 @media screen and (min-width: 200px) and (max-width: 1380px) {
     #navbar-fullscreen {
