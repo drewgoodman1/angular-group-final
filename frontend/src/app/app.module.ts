@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { WorkerNavbarComponent } from './worker-navbar/worker-navbar.component';
 import { LoginComponent } from './login/login.component';
+import { TeamsComponent } from './teams/teams.component';
+import { TeamViewComponent } from './component/team-view/team-view.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { LoginComponent } from './login/login.component';
     AdminNavbarComponent,
     WorkerNavbarComponent,
     LoginComponent,
+    TeamsComponent,
+    TeamViewComponent,
   ],
   imports: [
     BrowserModule,
