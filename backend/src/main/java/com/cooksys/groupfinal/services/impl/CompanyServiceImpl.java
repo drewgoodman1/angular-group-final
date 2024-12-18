@@ -27,6 +27,7 @@ import com.cooksys.groupfinal.mappers.ProjectMapper;
 import com.cooksys.groupfinal.mappers.TeamMapper;
 import com.cooksys.groupfinal.repositories.AnnouncementRepository;
 import com.cooksys.groupfinal.repositories.CompanyRepository;
+import com.cooksys.groupfinal.repositories.ProjectRepository;
 import com.cooksys.groupfinal.repositories.TeamRepository;
 import com.cooksys.groupfinal.repositories.UserRepository;
 import com.cooksys.groupfinal.services.CompanyService;
@@ -41,6 +42,7 @@ public class CompanyServiceImpl implements CompanyService {
 	private final TeamRepository teamRepository;
 	private final UserRepository userRepository; // Added dependency
 	private final AnnouncementRepository announcementRepository; // Added dependency
+	private final ProjectRepository projectRepository; // added
 	private final FullUserMapper fullUserMapper;
 	private final AnnouncementMapper announcementMapper;
 	private final TeamMapper teamMapper;
@@ -72,6 +74,7 @@ public class CompanyServiceImpl implements CompanyService {
 		return announcementMapper.entitiesToDtos(new HashSet<>(sortedList));
 	}
 
+	// create annnouncement
 	@Override
 	public AnnouncementDto createAnnouncement(Long companyId, AnnouncementDto announcementDto) {
 		// Validate company
@@ -114,4 +117,39 @@ public class CompanyServiceImpl implements CompanyService {
 		filteredProjects.removeIf(project -> !project.isActive());
 		return projectMapper.entitiesToDtos(filteredProjects);
 	}
+
+	@Override
+	public ProjectDto createProject(Long companyId, Long teamId, ProjectDto projectDto) {
+		// Validate the company
+		Company company = findCompany(companyId);
+	
+		// Validate the team and ensure it belongs to the specified company
+		Team team = teamRepository.findById(teamId)
+				.orElseThrow(() -> new NotFoundException("Team with ID " + teamId + " does not exist."));
+		if (!company.getTeams().contains(team)) {
+			throw new NotFoundException("Team with ID " + teamId + " does not belong to company with ID " + companyId + ".");
+		}
+	
+		// Validate the incoming project DTO
+		if (projectDto.getName() == null || projectDto.getName().trim().isEmpty()) {
+			throw new BadRequestException("Project name cannot be null or empty.");
+		}
+		if (projectDto.getDescription() == null || projectDto.getDescription().trim().isEmpty()) {
+			throw new BadRequestException("Project description cannot be null or empty.");
+		}
+	
+		// Map the incoming DTO to a Project entity
+		Project project = projectMapper.dtoToEntity(projectDto);
+	
+		// Associate the project with the team
+		project.setTeam(team);
+	
+		// Save the project to the database
+		Project savedProject = projectRepository.save(project);
+	
+		// Convert the saved entity back to a DTO and return it
+		return projectMapper.entityToDto(savedProject);
+	}
+	
+	
 }

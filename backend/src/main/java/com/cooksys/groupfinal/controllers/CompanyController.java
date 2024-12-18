@@ -49,4 +49,13 @@ public class CompanyController {
         return companyService.createAnnouncement(id, announcementDto);
     }
 
+    @PostMapping("/{companyId}/teams/{teamId}/projects")
+    public ProjectDto createProject(
+            @PathVariable Long companyId,
+            @PathVariable Long teamId,
+            @RequestBody ProjectDto projectDto) {
+        // Delegate the logic to the service layer
+        return companyService.createProject(companyId, teamId, projectDto);
+}
+
 }
