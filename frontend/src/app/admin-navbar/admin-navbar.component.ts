@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
 
 export class AdminNavbarComponent {
 
-//   function showSidebar() {
-//     const sidebar = document.querySelector('.sidebar')
-//     sidebar.style.display = 'block'
-// }
-// function hideSidebar() {
-//     const sidebar = document.querySelector('.sidebar')
-//     sidebar.style.display = 'none'
-// }
+  public showSidebar() {
+      // const sidebar = document.querySelector('.sidebar')
+      // sidebar.style.display = 'block'
+  }
+  public hideSidebar() {
+      // const sidebar = document.querySelector('.sidebar')
+      // sidebar.style.display = 'none'
+  }
 
 }
