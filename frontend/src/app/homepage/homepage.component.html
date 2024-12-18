@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- Mulish Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="homepage.component.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- Need to add the navbar here conditionally (admin or worker) -->
+
+    <!-- <app-admin-navbar></app-admin-navbar> -->
+
+    <!-- Title Container Fullscreen -->
+    <div class="title-container-fullscreen">
+        <h1 id="announcements">Announcements</h1>
+        <button id="new-button" onclick=showNewMenu()>New</button>
+        <!-- <h2 id="announcements-mobile">Announcements<button id="new-button-mobile" onclick=showNewMenu()>New</button></h> -->
+    </div>
+
+    <!-- Title Container Mobile -->
+    <div class="title-container-mobile">
+        <h2 id="announcements-mobile">Announcements</h2>
+        <button id="new-button-mobile" onclick=showNewMenu()>New</button>
+    </div>
+
+    <!-- New Announcement Form -->
+    <div class="create-announcement">
+        <form class="form">
+            <div class="close-button-container"><img src="closeButton.png" id="close-button" onclick=hideNewMenu()>
+            </div>
+            <label for="title" class="labels">Title</label>
+            <input type="text" class="form-input" name="title"><br>
+            <label for="message" class="labels">Message</label>
+            <input type="text" class="form-input" name="message">
+            <input type="submit" id="submit-button" value="Submit">
+        </form>
+    </div>
+
+    <!-- Announcement Card - Can be added to its own component later -->
+    <div class="card-container">
+        <div class="name-date-container">
+            <p class="card-component" id="card-name">Christ, CEO</p>
+            <p class="card-component" id="card-date">12/18/2024</p>
+        </div>
+        <p class="card-component" id="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis fuga
+            pariatur harum veniam.
+            Cupiditate repellendus illum laboriosam deleniti nam, libero porro officiis optio. Quae iure explicabo
+            consequuntur. Sapiente, similique qui!</p>
+    </div>
+
+    <!-- Functions -->
+    <script>
+        // Displays the New Annoucement Menu when New button is clicked
+        function showNewMenu() {
+            const form = document.querySelector('.form')
+            form.style.display = 'block'
+        }
+
+        // Hides the New Announcement Menu when X is clicked
+        function hideNewMenu() {
+            const form = document.querySelector('.form')
+            form.style.display = 'none'
+        }
+    </script>
+
+</body>
+
+</html>
