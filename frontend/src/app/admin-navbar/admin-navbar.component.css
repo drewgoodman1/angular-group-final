@@ -1,26 +1,12 @@
-/* <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="admin-navbar.component.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
-    rel="stylesheet"> */
-
-/* @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap'); */
-
 
 * {
+    font-family: "Mulish", sans-serif;
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     background-color: #051622;
     color: #1ba098;
-}
-
-body {
-    font-family: "Mulish", sans-serif;
-    font-size: 48px;
 }
 
 .nav-container {
@@ -35,10 +21,15 @@ body {
     margin-right: 20px;
 }
 
+.right-side li {
+    font-size: 48px;
+}
+
 .right-side li,
 .left-side li {
     display: inline-block;
     margin-right: 35px;
+    padding-bottom: 20px;
 }
 
 .right-side li a,
