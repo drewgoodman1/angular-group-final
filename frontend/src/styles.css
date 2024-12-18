@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #051622;
+  --secondary-color: #1ba098;
+
+  --font-red: #f24e1e;
+  --font-green: #22dd2abf;
+  --font-purple: #5533ff;
+  --font-white: #ffffff;
+
+  --tan: #deb992;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+h1,
+h2,
+label {
+  color: var(--secondary-color);
+  font-family: "Song Myung", serif;
+}
+button {
+  color: white;
+}
