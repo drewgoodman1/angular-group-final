@@ -23,4 +23,7 @@ public interface CompanyService {
 	// New method to create a project
 	ProjectDto createProject(Long companyId, Long teamId, ProjectDto projectDto);
 
+	// New method for updating projects
+	ProjectDto updateProject(Long companyId, Long teamId, Long projectId, ProjectDto projectDto);
+
 }
