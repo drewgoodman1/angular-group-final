@@ -1,4 +1,5 @@
 * {
+    font-family: "Mulish", sans-serif;
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -149,7 +150,7 @@ body {
     margin: 0 auto;
     margin-top: 50px;
     padding: 30px;
-    width: 40%;
+    width: 35%;
     border-radius: 13px;
     font-size: 18px;
     text-align: justify;
