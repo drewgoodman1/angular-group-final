@@ -9,19 +9,18 @@
 
 body {
     font-family: "Mulish", sans-serif;
-    font-size: 48px;
 }
 
 .nav-container {
     border: 3px solid #deb992;
     display: flex;
     justify-content: space-between;
-    padding-top: 25px;
+    padding: 10px;
+    /* padding-top: 25px; */
 }
 
-.logo {
-    margin-left: 20px;
-    margin-right: 20px;
+.right-side {
+    font-size: 48px;
 }
 
 .right-side li, .left-side li {
@@ -43,6 +42,7 @@ body {
     color:#f24e1e;
     font-size: 24px;
     margin-top: 25px;
+    margin-left: 40px;
 }
 
 .left-side {
