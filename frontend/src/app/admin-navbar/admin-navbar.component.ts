@@ -5,6 +5,16 @@ import { Component } from '@angular/core';
   templateUrl: './admin-navbar.component.html',
   styleUrls: ['./admin-navbar.component.css']
 })
+
 export class AdminNavbarComponent {
+
+//   function showSidebar() {
+//     const sidebar = document.querySelector('.sidebar')
+//     sidebar.style.display = 'block'
+// }
+// function hideSidebar() {
+//     const sidebar = document.querySelector('.sidebar')
+//     sidebar.style.display = 'none'
+// }
 
 }

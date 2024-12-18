@@ -1,29 +1,29 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <!-- Mulish Font Import -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="homepage.component.css">
-</head>
 
-<body>
+
+<body> -->
     <!-- Navbar -->
     <!-- Need to add the navbar here conditionally (admin or worker) -->
 
-    <!-- <app-admin-navbar></app-admin-navbar> -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homepage</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="homepage.component.css">
+    </head>
+
+    <app-admin-navbar></app-admin-navbar>
 
     <!-- Title Container Fullscreen -->
     <div class="title-container-fullscreen">
         <h1 id="announcements">Announcements</h1>
         <button id="new-button" onclick=showNewMenu()>New</button>
-        <!-- <h2 id="announcements-mobile">Announcements<button id="new-button-mobile" onclick=showNewMenu()>New</button></h> -->
     </div>
 
     <!-- Title Container Mobile -->
@@ -58,20 +58,18 @@
     </div>
 
     <!-- Functions -->
-    <script>
-        // Displays the New Annoucement Menu when New button is clicked
-        function showNewMenu() {
-            const form = document.querySelector('.form')
-            form.style.display = 'block'
-        }
+        <!-- // Displays the New Annoucement Menu when New button is clicked
+        // function showNewMenu() {
+        //     const form = document.querySelector('.form')
+        //     form.style.display = 'block'
+        // } -->
 
-        // Hides the New Announcement Menu when X is clicked
-        function hideNewMenu() {
-            const form = document.querySelector('.form')
-            form.style.display = 'none'
-        }
-    </script>
+        <!-- // Hides the New Announcement Menu when X is clicked
+    //     function hideNewMenu() {
+    //         const form = document.querySelector('.form')
+    //         form.style.display = 'none'
+    //     } -->
 
-</body>
+<!-- </body>
 
-</html>
+</html> -->
