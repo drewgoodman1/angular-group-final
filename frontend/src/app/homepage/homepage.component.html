@@ -14,21 +14,43 @@
 </head>
 
 <body>
-    <!-- <app-admin-navbar></app-admin-navbar> -->
+    <!-- Navbar -->
     <!-- Need to add the navbar here conditionally (admin or worker) -->
+
+    <!-- <app-admin-navbar></app-admin-navbar> -->
+
+    <!-- Title Container -->
     <div class="title-container">
         <h1 id="announcements">Announcements</h1>
-        <button id="new-button">New</button>
+        <button id="new-button" onclick=showNewMenu()>New</button>
     </div>
+
+    <!-- New Announcement Form -->
     <div class="create-announcement">
         <form class="form">
+            <div class="close-button-container"><img src="closeButton.png" id="close-button" onclick=hideNewMenu()></div>
             <label for="title" class="labels">Title</label>
             <input type="text" class="form-input" name="title"><br>
             <label for="message" class="labels">Message</label>
             <input type="text" class="form-input" name="message">
-            <input type="submit" id= "submit-button" value="Submit">
+            <input type="submit" id="submit-button" value="Submit">
         </form>
     </div>
+
+    <script>
+        // Displays the New Annoucement Menu when New button is clicked
+        function showNewMenu() {
+            const form = document.querySelector('.form')
+            form.style.display = 'block'
+        }
+
+        // Hides the New Announcement Menu when X is clicked
+        function hideNewMenu() {
+            const form = document.querySelector('.form')
+            form.style.display = 'none'
+        }
+    </script>
+
 </body>
 
 </html>
