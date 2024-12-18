@@ -20,9 +20,7 @@ public interface CompanyService {
 	// New method to create an announcement
 	AnnouncementDto createAnnouncement(Long companyId, AnnouncementDto announcementDto);
 
-	
-
-
-
+	// New method to create a project
+	ProjectDto createProject(Long companyId, Long teamId, ProjectDto projectDto);
 
 }
