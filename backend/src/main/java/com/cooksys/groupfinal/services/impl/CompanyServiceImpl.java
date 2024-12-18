@@ -150,6 +150,41 @@ public class CompanyServiceImpl implements CompanyService {
 		// Convert the saved entity back to a DTO and return it
 		return projectMapper.entityToDto(savedProject);
 	}
+
+	@Override
+	public ProjectDto updateProject(Long companyId, Long teamId, Long projectId, ProjectDto projectDto) {
+		// Validate the company
+		Company company = findCompany(companyId);
+	
+		// Validate the team and ensure it belongs to the specified company
+		Team team = teamRepository.findById(teamId)
+				.orElseThrow(() -> new NotFoundException("Team with ID " + teamId + " does not exist."));
+		if (!company.getTeams().contains(team)) {
+			throw new NotFoundException("Team with ID " + teamId + " does not belong to company with ID " + companyId + ".");
+		}
+	
+		// Validate the project and ensure it belongs to the specified team
+		Project project = projectRepository.findById(projectId)
+				.orElseThrow(() -> new NotFoundException("Project with ID " + projectId + " does not exist."));
+		if (!team.getProjects().contains(project)) {
+			throw new NotFoundException("Project with ID " + projectId + " does not belong to team with ID " + teamId + ".");
+		}
+	
+		// Update project fields if provided
+		if (projectDto.getName() != null && !projectDto.getName().trim().isEmpty()) {
+			project.setName(projectDto.getName());
+		}
+		if (projectDto.getDescription() != null && !projectDto.getDescription().trim().isEmpty()) {
+			project.setDescription(projectDto.getDescription());
+		}
+		// Handle the 'active' field explicitly; since it's a primitive boolean, assume default is false
+		project.setActive(projectDto.isActive());
+	
+		// Save and return the updated project
+		Project updatedProject = projectRepository.save(project);
+		return projectMapper.entityToDto(updatedProject);
+	}
+
 	
 	
 }
