@@ -14,7 +14,7 @@ body {
 
 /* Title and New Announcement Button */
 
-.title-container {
+.title-container-fullscreen {
     margin: auto;
     padding-bottom: 50px;
     margin-bottom: 50px;
@@ -23,10 +23,29 @@ body {
     border-bottom: 1px solid #deb992;
 }
 
+.title-container-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 30px;
+    width: 50%;
+    padding-top: 20px;
+    border-bottom: 1px solid #deb992;
+    display: none;
+}
+
 #announcements {
     text-align: center;
     font-size: 48px;
     font-weight: 300;
+}
+
+#announcements-mobile {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    display: none;
 }
 
 #new-button {
@@ -37,6 +56,18 @@ body {
     background-color: #1BA098;
     color: white;
     border: none;
+}
+
+#new-button-mobile {
+    margin-top: 5px;
+    float: right;
+    width: 103px;
+    height: 32px;
+    border-radius: 10px;
+    background-color: #1BA098;
+    color: white;
+    border: none;
+    display: none;
 }
 
 #new-button:hover {
@@ -142,3 +173,25 @@ body {
     font-weight: 300;
     font-size: 24px;
 }
+
+/* Media Queries */
+@media screen and (min-width: 200px) and (max-width: 1150px) {
+    .title-container-mobile {
+        display: flex;
+    }
+    #announcements-mobile {
+        display: flex;
+    }
+    #new-button-mobile {
+        display: block;
+    }
+    .title-container-fullscreen {
+        display: none;
+    }
+    #announcements {
+        display: none;
+    }
+    #new-button {
+        display: none;
+    }
+} 
