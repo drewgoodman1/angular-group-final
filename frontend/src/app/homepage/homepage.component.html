@@ -28,7 +28,8 @@
     <!-- New Announcement Form -->
     <div class="create-announcement">
         <form class="form">
-            <div class="close-button-container"><img src="closeButton.png" id="close-button" onclick=hideNewMenu()></div>
+            <div class="close-button-container"><img src="closeButton.png" id="close-button" onclick=hideNewMenu()>
+            </div>
             <label for="title" class="labels">Title</label>
             <input type="text" class="form-input" name="title"><br>
             <label for="message" class="labels">Message</label>
@@ -37,6 +38,19 @@
         </form>
     </div>
 
+    <!-- Announcement Card - Can be added to its own component later -->
+    <div class="card-container">
+        <div class="name-date-container">
+            <p class="card-component" id="card-name">Christ, CEO</p>
+            <p class="card-component" id="card-date">12/18/2024</p>
+        </div>
+        <p class="card-component" id="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis fuga
+            pariatur harum veniam.
+            Cupiditate repellendus illum laboriosam deleniti nam, libero porro officiis optio. Quae iure explicabo
+            consequuntur. Sapiente, similique qui!</p>
+    </div>
+
+    <!-- Functions -->
     <script>
         // Displays the New Annoucement Menu when New button is clicked
         function showNewMenu() {

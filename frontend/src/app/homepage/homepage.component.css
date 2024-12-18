@@ -110,3 +110,35 @@ body {
 #submit-button:hover {
     background-color: #f24e1e;
 }
+
+/* Announcement Card */
+
+.card-container {
+    background-color: #0B2D45;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 30px;
+    width: 40%;
+    border-radius: 13px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.card-component {
+    color: white;
+    background-color: #0B2D45;
+}
+
+.name-date-container {
+    font-weight: 300;
+    background-color: #0B2D45;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+#card-name, #card-date {
+    font-weight: 300;
+    font-size: 24px;
+}
