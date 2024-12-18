@@ -13,7 +13,7 @@
     border: 3px solid #deb992;
     display: flex;
     justify-content: space-between;
-    padding-top: 25px;
+    padding: 10px;
 }
 
 .logo {
@@ -21,7 +21,7 @@
     margin-right: 20px;
 }
 
-.right-side li {
+.right-side {
     font-size: 48px;
 }
 
@@ -29,7 +29,7 @@
 .left-side li {
     display: inline-block;
     margin-right: 35px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 .right-side li a,
@@ -53,6 +53,10 @@
 .left-side {
     display: flex;
     flex-direction: row;
+}
+
+#hamburger-menu {
+    padding-top: 15px;
 }
 
 .sidebar {
