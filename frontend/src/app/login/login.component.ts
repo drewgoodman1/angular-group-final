@@ -17,8 +17,16 @@ export class LoginComponent {
     this.authService.login(this.username, this.password).subscribe({
       next: () => {
         console.log('Login successful!');
-        console.log(this.authService.getLoggedInUser())
-        // this.router.navigate(['/ to home page']);
+        const loggedInUser = this.authService.getLoggedInUser();
+        console.log(loggedInUser);
+  
+        if (loggedInUser.admin) {
+          console.log('Navigating to company dropdown for admin');
+          this.router.navigate(['/company']); // Navigate to company component
+        } else {
+          console.log('Navigating to homepage for non-admin');
+          this.router.navigate(['/home']); // Navigate to homepage component
+        }
       },
       error: (err) => {
         console.error('Login failed:', err);
@@ -26,4 +34,5 @@ export class LoginComponent {
       },
     });
   }
+  
 }

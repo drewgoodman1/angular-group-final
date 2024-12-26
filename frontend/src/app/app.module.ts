@@ -10,6 +10,10 @@ import { LoginComponent } from './login/login.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TeamViewComponent } from './component/team-view/team-view.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { UsersPageComponent } from './users-page/users-page.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { CompanyComponent } from './company/company.component';
+import { AnnouncementCardComponent } from './announcement-card/announcement-card.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { HomepageComponent } from './homepage/homepage.component';
     TeamsComponent,
     TeamViewComponent,
     HomepageComponent,
+    UsersPageComponent,
+    ProjectsComponent,
+    CompanyComponent,
+    AnnouncementCardComponent,
   ],
   imports: [
     BrowserModule,

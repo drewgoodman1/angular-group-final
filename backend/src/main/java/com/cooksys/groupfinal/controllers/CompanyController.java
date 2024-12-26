@@ -2,6 +2,7 @@ package com.cooksys.groupfinal.controllers;
 
 import java.util.Set;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -27,31 +28,37 @@ public class CompanyController {
 	private final CompanyService companyService;
 	
 	@GetMapping("/{id}/users")
+    @CrossOrigin(origins="*")
     public Set<FullUserDto> getAllUsers(@PathVariable Long id) {
         return companyService.getAllUsers(id);
     }
 	
 	@GetMapping("/{id}/announcements")
+    @CrossOrigin(origins="*")
     public Set<AnnouncementDto> getAllAnnouncements(@PathVariable Long id) {
         return companyService.getAllAnnouncements(id);
     }
 	
 	@GetMapping("/{id}/teams")
+    @CrossOrigin(origins="*")
     public Set<TeamDto> getAllTeams(@PathVariable Long id) {
         return companyService.getAllTeams(id);
     }
 	
 	@GetMapping("/{companyId}/teams/{teamId}/projects") 
+    @CrossOrigin(origins="*")
 	public Set<ProjectDto> getAllProjects(@PathVariable Long companyId, @PathVariable Long teamId) {
 		return companyService.getAllProjects(companyId, teamId);
 	}
 
     @PostMapping("/{id}/announcements")
+    @CrossOrigin(origins="*")
     public AnnouncementDto createAnnouncement(@PathVariable Long id, @RequestBody AnnouncementDto announcementDto) {
         return companyService.createAnnouncement(id, announcementDto);
     }
 
     @PostMapping("/{companyId}/teams/{teamId}/projects")
+    @CrossOrigin(origins="*")
     public ProjectDto createProject(
             @PathVariable Long companyId,
             @PathVariable Long teamId,
@@ -61,6 +68,7 @@ public class CompanyController {
     }
 
     @PatchMapping("/{companyId}/teams/{teamId}/projects/{projectId}")
+    @CrossOrigin(origins="*")
     public ProjectDto updateProject(
             @PathVariable Long companyId,
             @PathVariable Long teamId,

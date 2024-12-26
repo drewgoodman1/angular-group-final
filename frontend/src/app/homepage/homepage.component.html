@@ -1,56 +1,52 @@
-
-<!-- Need to conditionally render admin or worker navbar -->
-
+<!-- Conditional Navbar Rendering -->
 <app-admin-navbar></app-admin-navbar>
 <!-- <app-worker-navbar></app-worker-navbar> -->
 
-<!-- Title Container Fullscreen -->
-<div class="title-container-fullscreen">
-    <h1 id="announcements">Announcements</h1>
-    <button id="new-button" onclick=showNewMenu()>New</button>
-</div>
+<!-- Main Container -->
+<div class="flex flex-col items-center justify-start min-h-screen bg-primary mt-16 px-4">
+    <!-- Title Section -->
+    <div class="w-full flex justify-between items-center border-b border-lightPurple pb-6 mb-6 max-w-4xl">
+        <h1 class="text-lightPurple text-4xl font-extrabold">Announcements</h1>
+        <button
+            class="bg-lightPurple hover:bg-purple text-white px-6 py-2 rounded-lg shadow-md"
+            (click)="showNewMenu()"
+        >
+            New
+        </button>
+    </div>
 
-<!-- Title Container Mobile -->
-<div class="title-container-mobile">
-    <h2 id="announcements-mobile">Announcements</h2>
-    <button id="new-button-mobile" onclick=showNewMenu()>New</button>
+    <!-- Announcement Cards -->
+    <div *ngFor="let announcement of announcements" class="w-full max-w-4xl mb-8">
+        <app-announcement-card [announcement]="announcement"></app-announcement-card>
+    </div>
 </div>
 
 <!-- New Announcement Form -->
-<div class="create-announcement">
-    <form class="form">
-        <div class="close-button-container"><img src="closeButton.png" id="close-button" onclick=hideNewMenu()>
+<div
+    class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center hidden"
+    id="newAnnouncementForm"
+>
+    <form class="bg-cardBackground p-6 rounded-lg shadow-lg w-96">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-lightPurple text-lg font-semibold">Create Announcement</h2>
+            <button type="button" class="text-lightPurple text-xl" (click)="hideNewMenu()">✖</button>
         </div>
-        <label for="title" class="labels">Title</label>
-        <input type="text" class="form-input" name="title"><br>
-        <label for="message" class="labels">Message</label>
-        <input type="text" class="form-input" name="message">
-        <input type="submit" id="submit-button" value="Submit">
+        <label for="title" class="block text-cardText mb-2">Title</label>
+        <input
+            type="text"
+            id="title"
+            class="w-full p-2 rounded border border-lightPurple mb-4 text-cardText bg-primary"
+        />
+        <label for="message" class="block text-cardText mb-2">Message</label>
+        <textarea
+            id="message"
+            class="w-full p-2 rounded border border-lightPurple mb-4 text-cardText bg-primary"
+        ></textarea>
+        <button
+            type="submit"
+            class="w-full bg-lightPurple hover:bg-purple text-white py-2 rounded-lg"
+        >
+            Submit
+        </button>
     </form>
 </div>
-
-<!-- Announcement Card - Can be added to its own component later -->
-<div class="card-container">
-    <div class="name-date-container">
-        <p class="card-component" id="card-name">Christ, CEO</p>
-        <p class="card-component" id="card-date">12/18/2024</p>
-    </div>
-    <p class="card-component" id="card-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis fuga
-        pariatur harum veniam.
-        Cupiditate repellendus illum laboriosam deleniti nam, libero porro officiis optio. Quae iure explicabo
-        consequuntur. Sapiente, similique qui!</p>
-</div>
-
-<!-- Functions -->
-
-<!-- // Displays the New Annoucement Menu when New button is clicked
-        // function showNewMenu() {
-        //     const form = document.querySelector('.form')
-        //     form.style.display = 'block'
-        // } -->
-
-<!-- // Hides the New Announcement Menu when X is clicked
-    //     function hideNewMenu() {
-    //         const form = document.querySelector('.form')
-    //         form.style.display = 'none'
-    //     } -->
