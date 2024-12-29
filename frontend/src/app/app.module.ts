@@ -14,6 +14,7 @@ import { UsersPageComponent } from './users-page/users-page.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { CompanyComponent } from './company/company.component';
 import { AnnouncementCardComponent } from './announcement-card/announcement-card.component';
+import { TeamCardComponent } from './team-card/team-card.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AnnouncementCardComponent } from './announcement-card/announcement-card
     ProjectsComponent,
     CompanyComponent,
     AnnouncementCardComponent,
+    TeamCardComponent,
   ],
   imports: [
     BrowserModule,

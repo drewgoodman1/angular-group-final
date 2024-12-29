@@ -87,11 +87,9 @@ export class AuthService {
     return companyNames;
   }
 
-  getTeams(): Object[] {
-    const user = this.getLoggedInUser();
-    console.log(user.teams)
-
-    return user.teams;
+  // Method to fetch teams for a specific company
+  getTeams(companyId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}company/${companyId}/teams`);
   }
 
   // Sets the selected company

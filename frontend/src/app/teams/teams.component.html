@@ -1,6 +1,25 @@
-<div class="header"><h2>Teams</h2></div>
-<!-- teams.component.ts -->
-<div class="team-grid">
-    <app-team-view *ngFor="let teamId of teamIds" [teamId]="teamId"></app-team-view>
+<!-- Conditional Navbar Rendering -->
+<app-admin-navbar *ngIf="isAdmin()"></app-admin-navbar>
+<!-- <app-worker-navbar *ngIf="!isAdmin()"></app-worker-navbar> -->
+
+<!-- Main Container -->
+<div class="flex flex-col items-center justify-start min-h-screen bg-primary mt-16 px-4">
+  <!-- Title Section -->
+  <div class="w-full flex justify-between items-center border-b border-lightPurple pb-6 mb-6 max-w-4xl">
+    <h1 class="text-lightPurple text-4xl font-extrabold">Teams</h1>
+    <button
+      class="bg-lightPurple hover:bg-purple text-white px-6 py-2 rounded-lg shadow-md"
+      (click)="showNewMenu()"
+    >
+      New Team
+    </button>
   </div>
-  
+
+  <!-- Error Message if no teams available -->
+  <div *ngIf="errorMessage" class="text-center text-red-500">{{ errorMessage }}</div>
+
+  <!-- Teams Cards Grid -->
+  <div *ngFor="let team of teams" class="w-full max-w-4xl mb-8">
+    <app-team-card [team]="team"></app-team-card>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="bg-cardBackground text-cardText p-6 rounded-lg shadow-lg mt-6 max-w-xl mx-auto">
+    <div class="flex justify-between items-center mb-4">
+      <p class="font-bold text-lg">{{ team.name }}</p>
+      <p class="text-sm text-lightPurple">{{ team.projectsCount }} Projects</p>
+    </div>
+  
+
+  
+    <div *ngIf="team.teammates.length > 0">
+      <p class="text-sm text-lightPurple mb-2">Members:</p>
+      <div *ngFor="let member of team.teammates" class="text-base">
+        <p>{{ member.profile.firstName }} {{ member.profile.lastName }}</p>
+      </div>
+    </div>
+  
+    <div *ngIf="team.teammates.length === 0" class="text-sm text-lightPurple mt-2">
+      No members assigned yet.
+    </div>
+  </div>
+  
